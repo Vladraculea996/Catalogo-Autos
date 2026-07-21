@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  
+  /* 60-30-10 Branding Theme Colors */
+  --color-dominant: #f8fafc;        /* 60% Neutro Dominante: Slate 50 (fondo limpio) */
+  --color-dominant-dark: #0f172a;   /* 60% Dominante Oscuro (opcional si el usuario alterna o para contrastes) */
+  --color-surface-glass: rgba(255, 255, 255, 0.7); /* 30% Superficie: Vidrio frosted blanco */
+  --color-surface-glass-dark: rgba(30, 41, 59, 0.7); /* 30% Superficie Oscura */
+  --color-accent: #f97316;          /* 10% Acento Fuerte: Naranja Deportivo (Orange 500) */
+  --color-accent-hover: #ea580c;    /* Acento hover (Orange 600) */
+  --color-accent-red: #ef4444;      /* Acento secundario/alerta (Red 500) */
+  --color-accent-green: #10b981;    /* Acento secundario/descuentos (Emerald 500) */
+}
+
+/* Glassmorphism Classes */
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 8px 32px 0 rgba(148, 163, 184, 0.08);
+}
+
+.glass-modal {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 20px 50px 0 rgba(15, 23, 42, 0.15);
+}
+
+.dark .glass-card {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+}
+
+.dark .glass-modal {
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 20px 50px 0 rgba(0, 0, 0, 0.4);
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(241, 245, 249, 1);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(203, 213, 225, 1);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 1);
+}
+
+/* Base custom styles */
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-dominant);
+  color: #1e293b; /* Slate 800 */
+}
+
+.dark body {
+  background-color: var(--color-dominant-dark);
+  color: #f1f5f9; /* Slate 100 */
+}

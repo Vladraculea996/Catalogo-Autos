@@ -1,0 +1,6 @@
+{
+  "name": "Catálogo de Autos",
+  "description": "Un catálogo demo moderno e interactivo para venta de automóviles, con buscador avanzado, vista de detalles con video y un panel de administración para gestionar carros en localStorage.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
